@@ -23,7 +23,11 @@ export const reducer = (state, action) => {
           return  {
               todos: state.todos.map(todo => todo.id === action.id ? {...todo, completed: !todo.completed} : todo)
           }
-              
+        case "CLEAR_TODOS":
+            console.log(action)
+            return { 
+                todos: state.todos.filter(todo => !todo.completed)
+            }
           
       default:
         return state;

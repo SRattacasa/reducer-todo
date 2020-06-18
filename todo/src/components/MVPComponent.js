@@ -37,7 +37,10 @@ const MVPComponent = () => {
         ))}
         {console.log(state.todos)}
       </div>
-
+      <button onClick={() => { 
+          dispatch({type: "CLEAR_TODOS"})
+      }}> CLEAR TO DOS</button>
+      
     </div>
   );
 };
